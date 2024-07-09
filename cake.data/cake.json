@@ -1,0 +1,60 @@
+{
+    "notes": [
+      {
+        "id": 1,
+        "name": "Double Chocolate Cupcake",
+        "category": "Cupcake",
+        "price": 1.20,
+        "unit": "piece"
+      },
+      {
+        "id": 2,
+        "name": "Red Velvet Cupcake",
+        "category": "Cupcake",
+        "price": 1.20,
+        "unit": "piece"
+      },
+      {
+        "id": 3,
+        "title": "Banana Cake",
+        "category": "Cake",
+        "price": 2,
+        "unit": "pound"
+      },
+      {
+        "id": 4,
+        "title": "CheeseCake Minis",
+        "category": "Cupcake",
+        "price": 1.99,
+        "unit": "piece"
+      },
+      {
+        "id": 5,
+        "title": "Cinnamon Bun",
+        "category": "pastry",
+        "price": 1.30,
+        "unit": "piece"
+      },
+      {
+        "id": 5,
+        "title": "Coffee Cake",
+        "category": "Cake",
+        "price": 2,
+        "unit": "pound"
+      },
+      {
+        "id": 7,
+        "title": "Donut",
+        "category": "pastry",
+        "price": 1,
+        "unit": "piece"
+      },
+      {
+        "id": 8,
+        "title": "Cherry Pie",
+        "category": "Cake",
+        "price": 2,
+        "unit": "pound"
+      }
+    ]
+  }
