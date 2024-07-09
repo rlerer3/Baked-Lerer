@@ -15,7 +15,11 @@ import { DessertsService } from '../services/desserts.service';
 })
 export class MainPageComponent implements OnInit {
   baked:Bake[] = [];
+  message= "Welcome to Baked 4 Less";
   searchText: string = '';
+  getDay = new Date();
+  myLink= 'https://www.facebook.com';
+
   constructor(private dessertService:DessertsService) { }
 
   ngOnInit(): void {
@@ -29,11 +33,11 @@ export class MainPageComponent implements OnInit {
       });
     }
   
-    onFruitAdded(bake: Bake) {
+    onakeAdded(bake: Bake) {
       this.baked.push(bake);
     }
   
-    onSearchTextChanged(fruitName: string) {
+    onSearchTextChanged(bakeName: string) {
       this.dessertService.getBaked().subscribe({
         next: data => {
           if (bakeName || bakeName !== '') {

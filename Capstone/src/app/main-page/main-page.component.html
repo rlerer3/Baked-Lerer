@@ -1,5 +1,9 @@
 <p>main-page works!</p>
 <app-order-form></app-order-form>
+<h2>{{message}}</h2>
+<h3>Today is {{getDay.toLocaleString()}}</h3>
+<div class="card" *ngFor="let bake of baked">
+    <img src="../../assets/fruits/{{bake.name}}.jpg" alt={{bake.name}}>
 
 <div class="card" *ngFor="let bake of baked">
     <div class="card-content">
