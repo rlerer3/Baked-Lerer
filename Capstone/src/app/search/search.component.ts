@@ -28,6 +28,7 @@
 // }
 
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { NgModule } from '@angular/core';
 
 @Component({
   selector: 'app-search',
