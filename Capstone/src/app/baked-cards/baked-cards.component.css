@@ -23,8 +23,6 @@ a {
     letter-spacing: .25px;
     font-weight: 500;
     font-size: 1em;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
     display: -webkit-box;
     }
     #duration {
