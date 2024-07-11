@@ -1,0 +1,42 @@
+.order-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .order-form h2 {
+    text-align: center;
+  }
+  
+  .order-form div {
+    margin-bottom: 1em;
+  }
+  
+  .order-form label {
+    display: block;
+    margin-bottom: 0.5em;
+  }
+  
+  .order-form input {
+    width: 100%;
+    padding: 0.5em;
+    box-sizing: border-box;
+  }
+  
+  .order-form button {
+    width: 100%;
+    padding: 0.7em;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .order-form button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  

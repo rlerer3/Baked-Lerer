@@ -4,4 +4,6 @@ export type Bake = {
     price?: number;
     unit?: string;
     imageURL?: string;
-}
+}  
+  
+  

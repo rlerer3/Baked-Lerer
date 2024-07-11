@@ -27,27 +27,73 @@
 //   }
 // }
 
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { NgModule } from '@angular/core';
+// import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+// import { NgModule } from '@angular/core';
 
+// @Component({
+//   selector: 'app-search',
+//   templateUrl: './search.component.html',
+//   styleUrls: ['./search.component.css']
+// })
+// export class SearchComponent implements OnInit {
+
+//   bakeName: string = "";
+
+//   @Output()
+//   searchTextChanged: EventEmitter<string> = new EventEmitter<string>();
+
+//   constructor() { }
+
+//   ngOnInit(): void {
+//   }
+//   searchBake() {    
+//     this.searchTextChanged.emit(this.bakeName);
+//   }
+
+// }
+// import { Component, EventEmitter, Output } from '@angular/core';
+
+// @Component({
+//   selector: 'app-search',
+//   templateUrl: './search.component.html',
+//   styleUrls: ['./search.component.css']
+// })
+// export class SearchComponent implements OnInit {
+
+//   bakeName: string = "";
+
+//   @Output()
+//   searchTextChanged: EventEmitter<string> = new EventEmitter<string>();
+
+//   constructor() { }
+
+//   ngOnInit(): void {
+//   }
+
+//   searchBake() {
+//     this.searchTextChanged.emit(this.bakeName);
+//   }
+
+//   reset() {
+//     this.bakeName = '';
+//     this.searchTextChanged.emit(this.bakeName);
+//   }
+// }
+import { Component, EventEmitter, Output } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-search',
-  templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css']
+  standalone: true,
+  imports: [FormsModule],
+  template: `
+    <input [(ngModel)]="searchText" (input)="onSearchTextChanged()" placeholder="Search" />
+  `
 })
-export class SearchComponent implements OnInit {
+export class SearchComponent {
+  searchText: string = '';
+  @Output() searchTextChanged = new EventEmitter<string>();
 
-  bakeName: string = "";
-
-  @Output()
-  searchTextChanged: EventEmitter<string> = new EventEmitter<string>();
-
-  constructor() { }
-
-  ngOnInit(): void {
+  onSearchTextChanged() {
+    this.searchTextChanged.emit(this.searchText);
   }
-  searchBake() {    
-    this.searchTextChanged.emit(this.bakeName);
-  }
-
 }
