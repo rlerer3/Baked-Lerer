@@ -1,13 +1,10 @@
 <p>search works!</p>
-<!-- <div class="search-box">
-    <input type="text" placeholder="Search Baked" [(ngModel)]="searchText" />
-    <button (click)="search()" type="button">Go</button>
-    <button (click)="reset()" type="button">Clear</button>
-</div> -->
-
-<div>
-    <mat-form-field>
-        <mat-label>Search Baked Goods</mat-label>
-        <input matInput (input)="searchBake()" type="text" placeholder="Search Bake" name="bakeName" [(ngModel)]="bakeName">
-    </mat-form-field>
+<div class="search-box">
+    <!-- <input type="text" placeholder="Search Baked" [(ngModel)]="searchText" /> -->
+    <input matInput (input)="searchBake()" type="text" placeholder="Search Bake" name="bakeName">
+    <!-- <button (click)="search()" type="button">Go</button>
+    <button (click)="reset()" type="button">Clear</button> -->
 </div>
+
+
+[(ngModel)]="bakeName"

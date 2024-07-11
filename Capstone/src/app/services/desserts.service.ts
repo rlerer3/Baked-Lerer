@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DessertsService {
 
-  URL: string = "http://localhost:3000/baked";
+  URL: string = "http://localhost:3000/notes";
   constructor(private http: HttpClient) { }
 //watch video about what needs to be added to config file to use https
   getBaked(): Observable<Array<Bake>> {
