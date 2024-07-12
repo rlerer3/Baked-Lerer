@@ -6,6 +6,14 @@
         <mat-card-content>
             <h4>{{bake?.name}}</h4>
             ${{bake?.price}} per {{bake?.unit}}
+            <div class="baked-goods-list">
+                <!-- <div *ngFor="let bake of baked"> -->
+                  <div class="baked-good">
+                      <h3>{{ bake?.name }}</h3>
+                      <img src="../../assets/images/{{bake?.imageURL}}.jpg" alt={{bake?.name}} width="280px" height="250px">
+                    <p>${{ bake?.price }} per {{ bake?.unit }}</p>
+                  </div>
+                </div>    
         </mat-card-content>
         <mat-card-actions>
             <button color="warn" mat-icon-button><mat-icon>favorite</mat-icon></button>
