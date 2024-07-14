@@ -1,9 +1,11 @@
 <p>search works!</p>
-
 <div class="search-box">
-    <app-search (searchTextChanged)="handleSearch($event)"></app-search>
-
+    <input matInput [(ngModel)]="searchText" (input)="searchBake()" type="text" placeholder="Search Baked or Bake" />
+    <button (click)="search()" type="button">Go</button>
+    <button (click)="reset()" type="button">Clear</button>
+</div>
+<!-- <div class="search-box">
     <input matInput [(ngModel)]="bakeName" (input)="searchBake()" type="text" placeholder="Search Bake" />
     <button (click)="searchBake()" type="button">Go</button>
     <button (click)="reset()" type="button">Clear</button>
-</div>
+</div> -->
