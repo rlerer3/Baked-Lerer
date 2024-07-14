@@ -15,8 +15,6 @@ a {
    height: 250px;
     display: inline-block;
     margin: 20px;
-    }
-    .card h4{
     white-space: normal;
     overflow: hidden;
     text-overflow: ellipsis;

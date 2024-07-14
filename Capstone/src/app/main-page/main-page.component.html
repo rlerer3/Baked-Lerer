@@ -1,22 +1,13 @@
-<p>main-page works!</p>
+<p>Main Page works</p>
 <app-order-form></app-order-form>
 <h2>{{message}}</h2>
 <h3>Today is {{getDay.toLocaleString()}}</h3>
 <div class="elfsight-app-86cb2390-9002-4ef2-9298-55e008f3665c" data-elfsight-app-lazy></div>
 <div class="elfsight-app-fcc1b7a3-7ad2-442a-a775-f6aa96ce584e" data-elfsight-app-lazy></div>
 
-<div class="search-box">
+<div>
       <input matInput [(ngModel)]="searchText" (input)="searchBake()" type="text" placeholder="Search Bake" />
   <button (click)="searchBake()" type="button">Go</button>
   <button (click)="reset()" type="button">Clear</button>
 </div>
 
-<div class="baked-goods-list">
-  <div *ngFor="let bake of baked">
-    <div class="baked-good">
-        <h3>{{ bake?.name }}</h3>
-        <img src="../../assets/images/{{bake?.imageURL}}.jpg" alt={{bake?.name}} width="280px" height="250px">
-      <p>${{ bake.price }} per {{ bake?.unit }}</p>
-    </div>
-  </div>
-</div>

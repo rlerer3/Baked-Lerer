@@ -1,14 +1,14 @@
 <p>baked-cards works!</p>
 <a href="">
-    <mat-card mat-ripple [matRippleCentered]="true" class="card-content">
+    <mat-card mat-ripple [matRippleCentered]="true" class="card">
         <img src="../../assets/images/" alt="" width="280px" height="250px">
     
-        <mat-card-content>
+        <mat-card-content class="card-content">
             <h4>{{bake?.name}}</h4>
             ${{bake?.price}} per {{bake?.unit}}
-            <div class="baked-goods-list">
+            <div>
                 <!-- <div *ngFor="let bake of baked"> -->
-                  <div class="baked-good">
+                  <div>
                       <h3>{{ bake?.name }}</h3>
                       <img src="../../assets/images/{{bake?.imageURL}}.jpg" alt={{bake?.name}} width="280px" height="250px">
                     <p>${{ bake?.price }} per {{ bake?.unit }}</p>

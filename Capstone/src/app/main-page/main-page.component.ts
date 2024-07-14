@@ -121,75 +121,6 @@
 //     this.loadBakedGoods();
 //   }
 // }
-// import { Component, OnInit } from '@angular/core';
-// import { CommonModule } from '@angular/common';
-// import { FormsModule } from '@angular/forms';
-// import { OrderFormComponent } from '../order-form/order-form.component';
-// import { Bake } from '../models/bake';
-// import { DessertsService } from '../services/desserts.service';
-
-// @Component({
-//   selector: 'app-main-page',
-//   standalone: true,
-//   imports: [OrderFormComponent, CommonModule, FormsModule],
-//   templateUrl: './main-page.component.html',
-//   styleUrls: ['./main-page.component.css']
-// })
-// export class MainPageComponent implements OnInit {
-//   baked: Bake[] = [];
-//   message = "Welcome to Baked 4 Less";
-//   searchText: string = '';
-//   getDay = new Date();
-//   myLink = 'https://www.facebook.com';
-
-//   constructor(private dessertService: DessertsService) { }
-
-//   ngOnInit(): void {
-//     this.loadBakedGoods();
-//   }
-
-//   loadBakedGoods() {
-//     this.dessertService.getBaked().subscribe({
-//       next: data => {
-//         this.baked = data; // Ensure data has single price per baked good
-//       },
-//       error: e => {
-//         alert("Network Error !! Please Try Again Later");
-//       }
-//     });
-//   }
-
-//   onBakeAdded(bake: Bake) {
-//     this.baked.push(bake);
-//   }
-
-//   onSearchTextChanged(searchText: string) {
-//     this.searchText = searchText;
-//     this.loadBakedGoods(); // Reload data to apply filter
-
-//     if (this.searchText && this.searchText.trim() !== '') {
-//       this.baked = this.baked.filter(bake =>
-//         bake.name?.toLowerCase().includes(this.searchText.toLowerCase())
-//       );
-//     } else {
-//       this.loadBakedGoods(); // Reload all if search text is empty
-//     }
-//   }
-
-//   searchBake() {
-//     if (this.searchText) {
-//       this.baked = this.baked.filter(bake =>
-//         bake.name?.toLowerCase().includes(this.searchText.toLowerCase())
-//       );
-//     } else {
-//       this.loadBakedGoods(); // Reload all if search text is empty
-//     }
-//   }
-
-//   reset() {
-//     this.searchText = '';
-//     this.loadBakedGoods(); // Reload all baked goods
-//   }
 // }
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -221,7 +152,6 @@ export class MainPageComponent implements OnInit {
   loadBakedGoods() {
     this.dessertService.getBaked().subscribe({
       next: data => {
-        // Ensure price is a number
         this.baked = data.map(item => ({
           ...item,
           price: Number(item.price)
@@ -239,14 +169,14 @@ export class MainPageComponent implements OnInit {
 
   onSearchTextChanged(searchText: string) {
     this.searchText = searchText;
-    this.loadBakedGoods(); // Reload data to apply filter
+    this.loadBakedGoods(); 
 
     if (this.searchText && this.searchText.trim() !== '') {
       this.baked = this.baked.filter(bake =>
         bake.name?.toLowerCase().includes(this.searchText.toLowerCase())
       );
     } else {
-      this.loadBakedGoods(); // Reload all if search text is empty
+      this.loadBakedGoods(); 
     }
   }
 
@@ -256,12 +186,12 @@ export class MainPageComponent implements OnInit {
         bake.name?.toLowerCase().includes(this.searchText.toLowerCase())
       );
     } else {
-      this.loadBakedGoods(); // Reload all if search text is empty
+      this.loadBakedGoods(); 
     }
   }
 
   reset() {
     this.searchText = '';
-    this.loadBakedGoods(); // Reload all baked goods
+    this.loadBakedGoods();
   }
 }
