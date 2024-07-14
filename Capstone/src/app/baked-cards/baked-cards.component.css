@@ -1,37 +1,28 @@
-.card-content{
-    text-align: center;
-    margin: 10px;
-    padding: 12px;
-}
-
-a {
-    text-decoration: none;
-    color: navy;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 0.75em;
-}
 .card {
-   width: 260px;
-   height: 250px;
-    display: inline-block;
+    width: 300px;
     margin: 20px;
-    white-space: normal;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    letter-spacing: .25px;
-    font-weight: 500;
-    font-size: 1em;
-    display: -webkit-box;
-    }
-    #duration {
-     background-color: black;
-    color: whitesmoke;
-    position: absolute;
-    top: 45%;
-    right: 4%;
-    z-index: 1;
-    width: 25px;
-    height: 20px;
-    text-align: right;
-    padding: 1px 6px;
-    }
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card img {
+    border-radius: 5px;
+  }
+  
+  .card-content {
+    text-align: center;
+  }
+  
+  .card-content h4 {
+    margin: 10px 0;
+    font-size: 1.2em;
+  }
+  
+  mat-card-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  
