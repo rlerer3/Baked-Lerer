@@ -1,3 +1,6 @@
+.background{
+    background-color: lightcyan;
+}
 p {
     font-size: 18px;
     font-weight: bold;
@@ -6,7 +9,7 @@ p {
 }
 
 
-app-order-form {
+order {
     display: block;
     margin: 20px auto;
     width: 100%;
@@ -32,7 +35,11 @@ h3 {
     display: block;
     margin: 20px 0;
 }
-
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
 div input[type="text"] {
     padding: 10px;
@@ -47,7 +54,7 @@ div button {
     padding: 10px 15px;
     font-size: 16px;
     color: #fff;
-    background-color: #007bff;
+    background-color: #174678;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -55,5 +62,5 @@ div button {
 }
 
 div button:hover {
-    background-color: #0056b3;
+    background-color: #81bbf9;
 }
