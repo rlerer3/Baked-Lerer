@@ -12,6 +12,7 @@
   <button (click)="searchBake()" type="button">Go</button>
   <button (click)="reset()" type="button">Clear</button>
 </div> -->
+<app-baked-cards *ngFor="let bake of baked" [bake]="bake"></app-baked-cards>
 
 <div class="search-container">
     <p>Search works!</p>

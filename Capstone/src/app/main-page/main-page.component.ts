@@ -128,11 +128,11 @@ import { FormsModule } from '@angular/forms';
 import { OrderFormComponent } from '../order-form/order-form.component';
 import { Bake } from '../models/bake';
 import { DessertsService } from '../services/desserts.service';
-
+import { BakedCardsComponent } from '../baked-cards/baked-cards.component';
 @Component({
   selector: 'app-main-page',
   standalone: true,
-  imports: [OrderFormComponent, CommonModule, FormsModule],
+  imports: [OrderFormComponent, CommonModule, FormsModule, BakedCardsComponent],
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.css']
 })
