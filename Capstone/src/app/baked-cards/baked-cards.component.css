@@ -1,4 +1,5 @@
 .card {
+    display: inline-flex;
     width: 300px;
     margin: 20px;
     transition: transform 0.2s;

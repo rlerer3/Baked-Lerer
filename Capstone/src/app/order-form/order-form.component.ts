@@ -19,6 +19,7 @@ export class OrderFormComponent {
 
   onSubmit() {
     console.log('Order Submitted:', this.baked);
+    alert ('Order Submitted:');
     this.resetForm();
   }
 

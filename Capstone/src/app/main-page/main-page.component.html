@@ -1,25 +1,18 @@
 <div class="background">
+    
+    <app-order-form></app-order-form>
+    
+    <div class="elfsight-app-86cb2390-9002-4ef2-9298-55e008f3665c" data-elfsight-app-lazy></div>
+    <div class="elfsight-app-fcc1b7a3-7ad2-442a-a775-f6aa96ce584e" data-elfsight-app-lazy></div>
+    <div class="search-container">
+        <p>Search works!</p>
+        <div class="search-box">
+          <input matInput [(ngModel)]="searchText" (input)="searchBake()" type="text" placeholder="Search Baked or Bake" />
+          <button mat-raised-button color="primary" (click)="searchBake()" type="button">Go</button>
+          <button mat-stroked-button color="warn" (click)="reset()" type="button">Clear</button>
+        </div>
+      </div>
 
-<app-order-form></app-order-form>
-
-<!-- <h2>{{message}}</h2>
-<h3>Today is {{getDay.toLocaleString()}}</h3> -->
-<div class="elfsight-app-86cb2390-9002-4ef2-9298-55e008f3665c" data-elfsight-app-lazy></div>
-<div class="elfsight-app-fcc1b7a3-7ad2-442a-a775-f6aa96ce584e" data-elfsight-app-lazy></div>
-<!-- 
-<div>
-      <input matInput [(ngModel)]="searchText" (input)="searchBake()" type="text" placeholder="Search Bake" />
-  <button (click)="searchBake()" type="button">Go</button>
-  <button (click)="reset()" type="button">Clear</button>
-</div> -->
 <app-baked-cards *ngFor="let bake of baked" [bake]="bake"></app-baked-cards>
 
-<div class="search-container">
-    <p>Search works!</p>
-    <div class="search-box">
-      <input matInput [(ngModel)]="searchText" (input)="searchBake()" type="text" placeholder="Search Baked or Bake" />
-      <button mat-raised-button color="primary" (click)="searchBake()" type="button">Go</button>
-      <button mat-stroked-button color="warn" (click)="reset()" type="button">Clear</button>
-    </div>
-  </div>
   </div>
