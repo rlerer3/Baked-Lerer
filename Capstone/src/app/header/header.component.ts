@@ -1,14 +1,12 @@
+
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { ShoppingCartComponent } from '../shopping-cart/shopping-cart.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [FormsModule],
+  imports: [RouterModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {
-
-}
+export class HeaderComponent { }
